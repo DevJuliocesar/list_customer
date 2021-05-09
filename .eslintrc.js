@@ -39,6 +39,12 @@ module.exports = {
         tsx: 'never',
       },
     ],
+    '@typescript-eslint/explicit-function-return-type': [
+      'error',
+      {
+        allowExpressions: true,
+      },
+    ],
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': ['error'],
     'max-len': ['warn', { code: 80 }],

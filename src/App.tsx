@@ -1,29 +1,30 @@
 import React from 'react';
+import { Button } from 'antd';
+import { Switch, Route } from 'react-router-dom';
+import styled from 'styles/styled-components';
 import logo from './logo.svg';
 import './App.css';
+import ListCustomer from './pages/listCustomer/listCustomer';
 
-function App() {
+const AppWrapper = styled.div`
+  max-width: calc(768px + 16px * 2);
+  margin: 0 auto;
+  display: flex;
+  min-height: 100%;
+  padding: 0 16px;
+  flex-direction: column;
+`;
+
+
+  function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit
-          {' '}
-          <code>src/App.tsx</code>
-          {' '}
-          and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppWrapper>
+    <Switch>
+    <Route exact path="/" component={ListCustomer} />
+    <Route path="/features" component={FeaturePage} />
+    <Route component={NotFoundPage} />
+  </Switch>
+    </AppWrapper>
   );
 }
 
