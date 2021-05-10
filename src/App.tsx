@@ -1,13 +1,15 @@
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import React from 'react';
 import './App.css';
-import ListCustomer from './pages/listCustomer/listCustomer';
+import ListCustomer from './pages/user/listUser';
+import ViewUser from './pages/user/viewUser';
 
 function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/" component={ListCustomer} />
+        <Route exact path="/" component={ListCustomer} />
+        <Route exact path="/:id" component={ViewUser} />
       </Switch>
     </BrowserRouter>
   );

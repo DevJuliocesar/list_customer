@@ -42,11 +42,12 @@ module.exports = {
     ],
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': ['error'],
-    'max-len': ['warn', { code: 80 }],
+    'max-len': ['warn', { code: 90 }],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     'import/prefer-default-export': 'off',
     'react/prop-types': 'off',
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
   },
   overrides: [
     {
