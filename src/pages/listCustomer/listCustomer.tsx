@@ -70,10 +70,8 @@ const ListCustomer = () => {
       key: 'action',
       render: (text: any, record: any) => (
         <Space size="middle">
-          <Link to="/about">
+          <Link to="/edit">
             Editar
-            {' '}
-            {record.name}
           </Link>
         </Space>
       ),
