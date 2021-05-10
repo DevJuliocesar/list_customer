@@ -1,13 +1,8 @@
 {
-    "Post": {
-      "title": "Hola",
-      "views": "int",
-      "published": "boolean",
-      "createdAt": "date",
-      "comments": "Comment[]"
-    },
-    "Comment": {
-      "body": "string",
-      "post": "Post"
+    "Users": {
+      "identification": "int",
+      "name": "string",
+      "age": "int",
+      "birthDay": "date"
     }
   }
