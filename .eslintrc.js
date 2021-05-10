@@ -30,6 +30,7 @@ module.exports = {
   rules: {
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': ['error'],
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
     'react/jsx-filename-extension': ['warn', { extensions: ['.tsx'] }],
     'import/extensions': [
       'error',
@@ -37,12 +38,6 @@ module.exports = {
       {
         ts: 'never',
         tsx: 'never',
-      },
-    ],
-    '@typescript-eslint/explicit-function-return-type': [
-      'error',
-      {
-        allowExpressions: true,
       },
     ],
     'no-shadow': 'off',
@@ -53,4 +48,13 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'react/prop-types': 'off',
   },
+  overrides: [
+    {
+      // enable the rule specifically for TypeScript files
+      files: ['*.ts', '*.tsx'],
+      rules: {
+        '@typescript-eslint/explicit-module-boundary-types': ['off'],
+      },
+    },
+  ],
 };
