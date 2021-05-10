@@ -1,5 +1,5 @@
-import React from 'react';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
+import React from 'react';
 import './App.css';
 import ListCustomer from './pages/listCustomer/listCustomer';
 
@@ -7,7 +7,7 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/" component={ListCustomer} />
+        <Route path="/" component={ListCustomer} />
       </Switch>
     </BrowserRouter>
   );
